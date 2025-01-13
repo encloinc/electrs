@@ -343,7 +343,7 @@ impl Daemon {
         };
         let network_info = daemon.getnetworkinfo()?;
         info!("{:?}", network_info);
-        if network_info.version < 16_00_00 {
+        if network_info.version < 11_00_00 {
             bail!(
                 "{} is not supported - please use bitcoind 0.16+",
                 network_info.subversion,
